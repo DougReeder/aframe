@@ -30174,7 +30174,7 @@ __webpack_require__(/*! ./core/a-mixin */ "./src/core/a-mixin.js");
 // Extras.
 __webpack_require__(/*! ./extras/components/ */ "./src/extras/components/index.js");
 __webpack_require__(/*! ./extras/primitives/ */ "./src/extras/primitives/index.js");
-console.log('A-Frame Version: 1.6.0 (Date 2024-09-28, Commit #f7338f3a)');
+console.log('A-Frame Version: 1.6.0 (Date 2024-09-29, Commit #494cd819)');
 console.log('THREE Version (https://github.com/supermedium/three.js):', THREE.REVISION);
 console.log('WebVR Polyfill Version:', pkg.dependencies['webvr-polyfill']);
 
@@ -32389,7 +32389,7 @@ module.exports.System = registerSystem('tracked-controls-webvr', {
         this.el.emit('controllersupdated', undefined, false);
       }
     } catch (e) {
-      console.warn('can\'t update controller list:', e);
+      console.warn('A-Frame requires additional permissions to list the gamepads. If this is running in an IFRAME, you need to add `gamepads` to the `allow` attribute. If this is running as the top-level page, the HTTP `Permissions-Policy` header must not exclude this origin in the `gamepad` directive.', e);
     }
   }
 });
